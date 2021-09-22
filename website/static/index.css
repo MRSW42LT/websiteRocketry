@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+:root {
+    --orange:  #fca311;
+}
+
+*{
+
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+hr{
+    background-color: var(--orange);
+}
+
+/* ---- HEADER & NAV ---- */
+
+header {
+    overflow: hidden;
+    background-color: black;
+    margin: auto;
+    padding: 10px 25px;
+    text-align: center;
+}
+
+header a {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 40px;
+    position: relative;
+}
+
+header a:before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--orange);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s ease-in-out;
+
+}
+  
+header a.logo {
+
+    font-size: 28px;
+    font-family: 'Rajdhani', sans-serif;
+
+}
+  
+header a:hover {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.shape-0 {
+    padding:10px;
+    border-radius:20px;
+    transition:0.5s;
+  }
+  .shape-0:hover {
+    color:black;
+    background:white;
+  }
+  
+/* ----  MAIN ---- */
+
+main {
+
+    margin: auto;
+    background-color: white;
+    padding: 50px 50px 50px 50px;
+    height: 800px; /* provisório favor remover */
+
+}
+
+/* ---- FOOTER ---- */
+
+footer {
+
+    overflow: hidden;
+    background-color: black;
+    font-size: 12px;
+    border-top: 1px solid var(--orange);
+    color: white;
+
+}
+
+footer a{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.top-footer-wrapper {
+
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 40px;
+    border-bottom: 1px solid var(--orange);
+
+}
+
+.bot-footer-wrapper {
+
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    font-weight: 100;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 500px) {
+    header{
+        text-align: center;
+    }
+}
