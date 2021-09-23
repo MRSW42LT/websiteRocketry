@@ -12,7 +12,7 @@
 }
 
 hr{
-    background-color: var(--orange);
+    background-color: gray;
 }
 
 /* ---- HEADER & NAV ---- */
@@ -93,7 +93,7 @@ footer {
     overflow: hidden;
     background-color: black;
     font-size: 12px;
-    border-top: 1px solid var(--orange);
+    border-top: 1px solid gray;
     color: white;
 
 }
@@ -118,8 +118,6 @@ footer a:hover{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 40px;
-    border-bottom: 1px solid gray;
-
 }
 
 .bot-footer-wrapper {
@@ -136,6 +134,13 @@ footer a:hover{
 
 }
 
+.row {
+    text-align: center;
+}
+
+.fab {
+    font-size: 38px;
+}
 
 
 /* RESPONSIVIDADE */
