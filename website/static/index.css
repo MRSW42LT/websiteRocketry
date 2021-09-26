@@ -68,6 +68,10 @@ main {
 
 }
 
+.auth-form {
+    width: 50%;
+}
+
 /* ---- FOOTER ---- */
 
 footer {

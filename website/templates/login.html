@@ -1,10 +1,35 @@
 {% extends "base.html" %}
-<title>{% block title %}Account{% endblock %}</title>
+<title>{% block title %}Login{% endblock %}</title>
 
 <main>
     {% block main %}
 
-    login
+    <form method="POST"  class="auth-form">
+        <h3 align="center">Log-in</h3>
+        <div class="form-group">
+            <label for="email">E-mail Adress</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email" name="email"
+                placeholder="Enter e-mail"
+            />
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password" name="password"
+                placeholder="Enter password"
+            />
+        </div>
+        <br>
+
+        <button type="submit" class="btn btn-primary">Log-in</button>
+
+    </form>
 
     {% endblock %}
 </main>
