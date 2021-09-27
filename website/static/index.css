@@ -37,15 +37,15 @@ header a {
     line-height: 35px;
     position: relative;
 }
-  
+
 header a.logo {
     font-size: 21px;
     font-family: 'Rajdhani', sans-serif;
 }
-  
+
 header a:hover {
     color: white;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .shape-0 { /* Efeito de hover */
@@ -57,7 +57,7 @@ header a:hover {
     color: var(--darkblue);
     background: white;
 }
-  
+
 /* ----  MAIN ---- */
 
 main {
@@ -65,7 +65,7 @@ main {
     margin: auto;
     background-color: white;
     padding: 50px 50px 50px 50px;
-
+    width: 70%;
 }
 
 .auth-form {
