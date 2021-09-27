@@ -11,6 +11,8 @@ function soma(){
     var campo1 = parseInt(document.getElementById("campo1").value);
     var campo2 = parseInt(document.getElementById("campo2").value);
 
-    soma = campo1 + campo2;
-    alert(soma);
+    total = campo1 + campo2;
+    document.getElementById('total').innerHTML = total;
+    //soma = campo1 + "Resultado: " + campo2;
+    //alert(soma);
 }
