@@ -9,11 +9,3 @@ def home():
 @views.route('/about')
 def about():
     return  render_template('about.html')
-
-@views.route('/support')
-def support():
-    return  render_template('support.html')
-
-@views.route('/find-us')
-def find_us():
-    return  render_template('find-us.html')

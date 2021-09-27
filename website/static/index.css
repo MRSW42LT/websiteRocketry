@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 :root {
-    --black:  #000;
+    --darkblue:  #161B22;
 }
 
 *{
@@ -21,7 +21,7 @@ hr{
 
 header {
     overflow: hidden;
-    background-color: black;
+    background-color: var(--darkblue);
     margin: auto;
     padding: 10px 25px;
     text-align: center;
@@ -54,7 +54,7 @@ header a:hover {
     transition: 0.2s;
 }
 .shape-0:hover {
-    color: black;
+    color: var(--darkblue);
     background: white;
 }
   
@@ -77,7 +77,7 @@ main {
 footer {
 
     overflow: hidden;
-    background-color: black;
+    background-color: var(--darkblue);
     font-size: 12px;
     border-top: 1px solid gray;
     color: white;
