@@ -2,7 +2,7 @@ function adicionarIngrediente(){
     var ing = document.getElementById("ingredientes").value;
     var lista = document.getElementById("lista").innerHTML;
 
-    lista = lista +"<br><li class=\"list-group-item\">" + ing + "</li><br>";
+    lista = lista +"<li class=\"list-group-item\">" + ing + "</li>";
 
     document.getElementById("lista").innerHTML = lista;
 }
