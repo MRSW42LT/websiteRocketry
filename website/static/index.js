@@ -16,3 +16,12 @@ function soma(){
     //soma = campo1 + "Resultado: " + campo2;
     //alert(soma);
 }
+
+function deleteNote(noteId){
+    fetch('/delete-note', {
+        method: 'POST',
+        body: JSON.stringify({ noteId: noteId })
+    }).then((_res) => {
+        window.location.href = "/";
+    } )
+}
