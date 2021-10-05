@@ -1,0 +1,4 @@
+NUNCA COMITAR database.db
+
+git update-index --assume-unchanged website/database.db
+git pull
