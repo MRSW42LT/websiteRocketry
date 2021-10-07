@@ -33,7 +33,7 @@
     <br><br><br>
 
 
-    <h1 align="center">Notes</h1>
+    <h1 align="center">Anotações</h1>
     <ul class="list-group list-group-flush" id="notes">
         {% for note in user.notes  %}
         <li class="list-group-item">{{ note.data }}
@@ -45,7 +45,7 @@
     </ul>
     <form method="POST">
         <textarea name="note" id="note" class="form-control"></textarea><br>
-        <div align="center"><button type="submit" class="btn btn-primary">Add Note</button></div>
+        <div align="center"><button type="submit" class="btn btn-primary">Adicionar anotação</button></div>
     </form>
 
 

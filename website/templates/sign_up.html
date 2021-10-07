@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-<title>{% block title %}Sign-up{% endblock %}</title>
+<title>{% block title %}Registrar-se{% endblock %}</title>
 
 <main>
     {% block main %}
 
     <form method="POST"  class="auth-form">
-        <h3 align="center">Sign-up</h3>
+        <h3 align="center">Registrar-se</h3>
         <div class="form-group">
-            <label for="email">E-mail Adress</label>
+            <label for="email">Endereço de e-mail</label>
             <input
                 type="email"
                 class="form-control"
@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Nome de usuário</label>
             <input
                 type="username"
                 class="form-control"
@@ -27,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            <label for="password1">Password</label>
+            <label for="password1">Senha</label>
             <input
                 type="password"
                 class="form-control"
@@ -37,7 +37,7 @@
         </div>
 
         <div class="form-group">
-            <label for="password2">Password (confirm)</label>
+            <label for="password2">Senha (confirmar)</label>
             <input
                 type="password"
                 class="form-control"
@@ -47,9 +47,9 @@
         </div>
         <br>
 
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Registrar-se</button>
 
-        <a href="/login">Login</a>
+        <a href="/login">Entrar</a>
 
     </form>
 
