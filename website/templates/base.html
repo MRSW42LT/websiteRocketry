@@ -24,14 +24,14 @@
     <body>
         <header>
             <div class="row justify-content-md-center">
-                <div class="col col-lg-2">
+                <div class="col col-lg-3">
                     <a href="/" class="logo hvr-grow">ROCKETRY<i class="fas fa-meteor"></i></a>
                 </div>
                 <div class="col-md-auto">
                     <a href="/" class="shape-0"><i class="fas fa-home"></i> Início</a>
                     <a href="/escola" class="shape-0"><i class="fas fa-book"></i> Atividades</a>
                 </div>
-                <div class="col col-lg-2">
+                <div class="col col-lg-3">
                     {% if user.is_authenticated %}
                     <a href="/logout" class="shape-0">Sair</a>
                     {% else %}
