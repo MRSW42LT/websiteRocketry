@@ -44,6 +44,6 @@ def delete_note():
 
     return jsonify({})
 
-@views.route('/pesquisa_bootstrap')
+@views.route('escola/pesquisa_bootstrap')
 def pesquisa_bootstrap():
     return render_template('pesquisa_bootstrap.html', user=current_user)
