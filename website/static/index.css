@@ -74,6 +74,12 @@ main {
     width: 50%;
 }
 
+.exemplo-login {
+    border: 1px solid black;
+    padding: 20px;
+    width: 30%;
+}
+
 /* ---- FOOTER ---- */
 
 footer {

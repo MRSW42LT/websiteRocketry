@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+<title>{% block title %}Pesquisa Bootstrap{% endblock %}</title>
+
+<main>
+    {% block main %}
+    <h1 class="text-center">Pesquisa Bootstrap</h1>
+
+    <h2>O que é Bootstrap</h2><br>
+    <p>Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.</p>
+
+    <p>O Bootstrap é um dos projetos mais bem avaliados no site GitHub, com mais de 111 600 estrelas e 51 500 forks. Possui ampla documentação na página oficial: https://getbootstrap.com/, assim como diversos tutoriais e materiais em português.</p>
+
+    <br><hr><br>
+
+    <h2>Instalação do Bootstrap</h2><br>
+
+    <h3 id="css">CSS</h3>
+
+    <p>Copie e cole o arquivo de estilo <code class="highlighter-rouge">&lt;link&gt;</code> dentro da sua <code class="highlighter-rouge">&lt;head&gt;</code> antes de todos os outros arquivos de estilo para carregar nosso CSS.</p>
+
+    <figure class="highlight "><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s class="text-light bg-dark"">"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+
+    <h3 id="js">JS</h3>
+
+    <p>Muitos dos nossos componentes precisam de JavaScript para funcionar. Mais especificamente, eles precisam do <a href="https://jquery.com">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a> e do nossos próprios plugins JavaScript. Coloque os seguintes <code class="highlighter-rouge">&lt;script&gt;</code>s perto do final da sua página, logo antes do fechamento da tag <code class="highlighter-rouge">&lt;/body&gt;</code>. jQuery tem que vir antes, depois o Popper.js e só depois nossos plugins JavaScript.</p>
+
+    <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+    <p>Curiosidade para saber quais componentes precisam de jQuery, nosso JS e Popper.js? Clique em “Mostrar componentes dependentes de JavaScript” logo abaixo. Se ainda tem dúvidas sobre a estrutura da página em geral, continue lendo para um templete de exemplo de página.</p>
+
+    <p>Our <code class="highlighter-rouge">bootstrap.bundle.js</code> and <code class="highlighter-rouge">bootstrap.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a>, but not <a href="https://jquery.com/">jQuery</a>. For more information about what’s included in Bootstrap, please see our <a href="/docs/4.1/getting-started/contents/#precompiled-bootstrap">contents</a> section.</p>
+
+    <details>
+    <summary class="text-primary mb-3">Mostrar componentes dependentes de JavaScript</summary>
+
+
+    <ul>
+    <li>Botões de dispensar alertas;</li>
+    <li>Botões para alternar estados e funcionalidades dos botões checkboxes e radios;</li>
+    <li>Comportamento de deslize, controles e indicadores do Carousel;</li>
+    <li>Colapso para alternar visibilidade de conteúdo;</li>
+    <li>Apresentação e posicionamento de dropdowns;
+        <ul>
+        <li>Também requer <a href="https://popper.js.org/">Popper.js</a>.</li>
+        </ul>
+    </li>
+    <li>Apresentação, posicionamento e rolagem nos Modais;</li>
+    <li>Aprimorar nosso plugin de colapso em navbars, para implementar comportamento responsivo;</li>
+    <li>Posicionamento e apresentação de tooltips e popovers;
+        <ul>
+        <li>Também requer <a href="https://popper.js.org/">Popper.js</a>.</li>
+        </ul>
+    </li>
+    <li>Comportamento de rolagem e atualizações de navegação no Scrollspy.</li>
+    </ul>
+
+    </details>
+
+    <br><hr><br>
+
+    <h2>Utilização e exemplo</h2><br>
+
+    <pre class="text-light bg-dark"><code>
+         &lt;form class="form-signin"&gt;
+         &lt;h1 class="h3 mb-3 font-weight-normal"&gt;Faça login &lt;/h1&gt;
+         &lt;label for="inputEmail" class="sr-only"&gt;Endereço de email &lt;/label&gt;
+         &lt;input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus&gt;
+         &lt;label for="inputPassword" class="sr-only"&gt;Senha &lt;/label&gt;
+         &lt;input type="pas
+        ckbox" value="remember-me"&gt; Lembrar de mim
+             &lt;/label&gt;
+         &lt;/div&gt;
+         &lt;button class="btn btn-lg btn-primary btn-block" type="submit"&gt;Login &lt;/button&gt;
+         &lt;p class="mt-5 mb-3 text-muted"&gt;&copy; 2017-2018 &lt;/p&gt;
+         &lt;/form&gt;
+    </code></pre>
+
+    <div class="exemplo-login">
+        <form class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+        <label for="inputEmail" class="sr-only">Endereço de email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+        <div class="checkbox mb-3">
+            <label>
+            <input type="checkbox" value="remember-me"> Lembrar de mim
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+        </form>
+    </div>
+
+    <br><hr><br>
+
+    <h4>Fontes</h4>
+    <a href="https://getbootstrap.com">getBootstrap</a><br>
+    <a href="https://pt.wikipedia.org/wiki/Bootstrap_(framework_front-end)">Wikipedia</a>
+    
+
+    {% endblock %}
+</main>
