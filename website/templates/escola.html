@@ -1,56 +1,56 @@
 {% extends "base.html" %}
 <title>{% block title %}Escola{% endblock %}</title>
 
-<main>
     {% block main %}
+    <main>
+    <div class="container">
+        <!--
+        <a href="static/index.js"><h4>Código fonte JavaScript  <i class="fas fa-external-link-alt"></i></h4></a>
 
-    <!--
-    <a href="static/index.js"><h4>Código fonte JavaScript  <i class="fas fa-external-link-alt"></i></h4></a>
+        <div style="text-align: center;">
+            <h2>Ingredientes do bolo </h2>
 
-    <div style="text-align: center;">
-        <h2>Ingredientes do bolo </h2>
+            <input type="text" id="ingredientes" class="form-control"><br>
 
-        <input type="text" id="ingredientes" class="form-control"><br>
+            <button onclick="adicionarIngrediente()" class="btn btn-primary">Adicionar</button><br><br>
 
-        <button onclick="adicionarIngrediente()" class="btn btn-primary">Adicionar</button><br><br>
+            <ul class="list-group" id="lista">
 
-        <ul class="list-group" id="lista">
+            </ul>
 
-        </ul>
+            <br><br><br>
+
+            <h2>Soma números</h2>
+            <div class="input-group">
+            <input type="text" class="form-control" name="campo1" id="campo1"><h2><span style="padding: 0px 10px 0px 10px;">+</span></h2>
+            <input type="text" class="form-control" name="campo2" id="campo2">
+            </div> <br>
+
+            <button onclick="soma()" class="btn btn-primary">Somar</button><br><br>
+            <h5>Resultado:</h5>
+            <div id="total"></div>
+        </div>
 
         <br><br><br>
+        -->
 
-        <h2>Soma números</h2>
-        <div class="input-group">
-          <input type="text" class="form-control" name="campo1" id="campo1"><h2><span style="padding: 0px 10px 0px 10px;">+</span></h2>
-          <input type="text" class="form-control" name="campo2" id="campo2">
-        </div> <br>
+        <li><a href="escola/pesquisa_bootstrap">Pesquisa Bootstrap</a></li>
 
-        <button onclick="soma()" class="btn btn-primary">Somar</button><br><br>
-        <h5>Resultado:</h5>
-        <div id="total"></div>
+        <h1 align="center">Anotações</h1>
+        <ul class="list-group list-group-flush" id="notes">
+            {% for note in user.notes  %}
+            <li class="list-group-item">{{ note.data }}
+                <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </li>
+            {% endfor %}
+        </ul>
+        <form method="POST">
+            <textarea name="note" id="note" class="form-control"></textarea><br>
+            <div align="center"><button type="submit" class="btn btn-primary">Adicionar anotação</button></div>
+        </form>
+
     </div>
-
-    <br><br><br>
-    -->
-
-    <li><a href="escola/pesquisa_bootstrap">Pesquisa Bootstrap</a></li>
-
-    <h1 align="center">Anotações</h1>
-    <ul class="list-group list-group-flush" id="notes">
-        {% for note in user.notes  %}
-        <li class="list-group-item">{{ note.data }}
-            <button type="button" class="close" onClick="deleteNote({{ note.id }})">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </li>
-        {% endfor %}
-    </ul>
-    <form method="POST">
-        <textarea name="note" id="note" class="form-control"></textarea><br>
-        <div align="center"><button type="submit" class="btn btn-primary">Adicionar anotação</button></div>
-    </form>
-
-
+    </main>
     {% endblock %}
-</main>
