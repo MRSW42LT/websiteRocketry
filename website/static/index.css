@@ -156,9 +156,12 @@ footer a:hover{
 }
 
 .row {
-    margin-top: 20px;
-    margin-bottom: 20px;
     text-align: center;
+}
+
+.row .info {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 /* RESPONSIVIDADE */
