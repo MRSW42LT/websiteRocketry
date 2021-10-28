@@ -11,6 +11,7 @@
 
 p {
     text-align: justify;
+    text-indent: 35px;
 }
 
 .fab {
@@ -155,6 +156,8 @@ footer a:hover{
 }
 
 .row {
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -168,7 +171,7 @@ footer a:hover{
     .header {
         position: relative;
         background-color: black;
-        height: 160vh;
+        height: 230vh;
         min-height: 40rem;
         width: 100%;
         overflow: hidden;
