@@ -2,14 +2,23 @@
 <title>{% block title %}Home{% endblock %}</title>
 
 {% block main %}
-    
 
-    <div class="jumbotron">
-        <h1 class="display-4">Rocketry</h1>
-        <p class="lead">A simple website focused on amateur rocketry, with instructions on how to make your own propellant and rocket fuselage</p>
-        <hr class="my-4">
-        <p>Propellants are danger, we show how to make for educational purposes only.</p>
-    </div>
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="../static/video/background-video.mp4" type="video/mp4">
+        </video>
+        <div class="container h-110">
+            <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+                <h1 class="display-3">Rocketry</h1>
+                <p class="lead mb-0">A simple website focused on amateur rocketry, with instructions on how to make your own propellant and rocket fuselage</p>
+                <hr class="my-4">
+                <p>Propellants are danger, we show how to make for educational purposes only.</p>
+            </div>
+            </div>
+        </div>
+    </header>
     
     <div class="teste"></div>
 {% endblock %}
