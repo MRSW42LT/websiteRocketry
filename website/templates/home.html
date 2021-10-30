@@ -1,83 +1,15 @@
 {% extends "base.html" %}
 <title>{% block title %}Home{% endblock %}</title>
 
-<main>
-    {% block main %}
-    <div class="header">
+{% block main %}
+    
 
-      <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-      <div class="overlay"></div>
-
-      <!-- The HTML5 video element that will create the background video on the header -->
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <source src="static/video/merlinfiring.mp4" type="video/mp4">
-      </video>
-
-      <!-- The header content -->
-      <div class="container h-100">
-        <div class="d-flex h-100 text-center align-items-center">
-          <div class="w-100 text-white">
-            <h1 class="display-6">A evolução dos motores SpaceX Merlin</h1>
-              <div class="row">
-                <div class="col-sm">
-                  <p class="lead mb-0">Merlin é uma família de motores de foguete desenvolvidos pela SpaceX para uso em seus veículos de lançamento Falcon 1, Falcon 9 e Falcon Heavy. Os motores Merlin usam RP-1 e oxigênio líquido como propelentes de foguetes em um ciclo de energia de gerador a gás. O motor Merlin foi originalmente projetado para recuperação e reutilização no mar, mas desde 2016 todo o booster Falcon 9 é recuperado para reutilização pousando verticalmente em uma plataforma de pouso usando um de seus nove motores Merlin.</p>
-                </div>
-                <div class="col-sm">
-                  <p class="lead mb-0">O injetor no coração do Merlin é do tipo macho que foi usado pela primeira vez no motor de pouso do Módulo Lunar Apollo (LMDE). Os propulsores são alimentados por uma turbobomba de eixo único e impulsor duplo. A turbobomba também fornece fluido de alta pressão para os atuadores hidráulicos, que então se reciclam na entrada de baixa pressão. Isso elimina a necessidade de um sistema de acionamento hidráulico separado e significa que a falha do controle de vetorização de empuxo por falta de fluido hidráulico não é possível.</p>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Rocketry</h1>
+        <p class="lead">A simple website focused on amateur rocketry, with instructions on how to make your own propellant and rocket fuselage</p>
+        <hr class="my-4">
+        <p>Propellants are danger, we show how to make for educational purposes only.</p>
     </div>
-
-<div class="container">
-  
-    <div class="engine-info">
-      <div class="row info">
-        <div class="col-lg-5">
-          <img src="static/img/Merlin1A.png" width="100%">
-        </div>
-        <div class="col-lg-7">
-          <h1>Merlin 1A</h1><hr>
-          <p>A versão inicial, o Merlin 1A, usava um bico de compósito de polímero reforçado com fibra de carbono resfriado ablativamente, barato e produzia 340 kN (76.000 lbf) de empuxo. O Merlin 1A voou apenas duas vezes: primeiro em 24 de março de 2006, quando pegou fogo e falhou devido a um vazamento de combustível logo após o lançamento, e a segunda vez em 21 de março de 2007, quando teve um desempenho bem-sucedido. Ambas as vezes, o Merlin 1A foi montado em um primeiro estágio Falcon 1.</p>
-          <p>A bomba turbo SpaceX era um projeto totalmente novo e em branco, contratado pela Barber-Nichols, Inc. em 2002, que executou todo o projeto, análise de engenharia e construção; a empresa já havia trabalhado em turbobombas para os programas de motor RS-88 (Bantam) e NASA Fastrac. A bomba turbo Merlin 1A usou um eixo principal soldado por fricção exclusivo, com extremidades Inconel 718 e um impulsor RP-1 de alumínio integral no meio. A carcaça da turbobomba foi construída usando fundições de investimento, com Inconel na extremidade da turbina, alumínio no centro e aço inoxidável da série 300 na extremidade LOX. A turbina foi um projeto de impulso de admissão parcial (ou seja, o fluido de trabalho só é admitido por meio de parte da rotação da turbina; um arco, não toda a circunferência) e girou a 20.000 rpm, com um peso total de 68 kg ( 150 lb).
-          </p>
-      </div>
-      <div class="row info">
-        <div class="col-lg-7">
-          <h1>Merlin 1C</h1><hr>
-          <p>Três versões do motor Merlin 1C foram produzidas. O motor Merlin para o Falcon 1 tinha um conjunto de escapamento turbo-bomba móvel, que era usado para fornecer controle de rotação por vetorização do escapamento. O motor Merlin 1C para o primeiro estágio do Falcon 9 é quase idêntico à variante usada para o Falcon 1, embora o conjunto de escapamento da turbobomba não seja móvel. Finalmente, uma variante de vácuo Merlin 1C é usada no segundo estágio Falcon 9. Este motor difere da variante de primeiro estágio do Falcon 9 porque usa um bocal de escape maior otimizado para operação a vácuo e pode ser estrangulado entre 60% e 100%.</p>
-          <p>O Merlin 1C usa um bico resfriado regenerativamente e uma câmara de combustão. A turbobomba usada é um modelo Merlin 1B com apenas pequenas alterações. Foi disparado com uma missão completa de 170 segundos em novembro de 2007, voou pela primeira vez em uma missão em agosto de 2008, acionou o "primeiro foguete de combustível líquido desenvolvido de forma privada a alcançar a órbita com sucesso", Falcon 1 Flight 4, em setembro de 2008 , e equipou o Falcon 9 em seu vôo inaugural em junho de 2010.</p>
-          <p>Um Merlin 1C foi usado pela primeira vez como parte da terceira tentativa malsucedida de lançar um Falcon 1. Ao discutir a falha, Elon Musk observou: "O vôo de nosso primeiro estágio, com o novo motor Merlin 1C que será usado no Falcon 9, foi a imagem perfeita. " O Merlin 1C foi usado no quarto vôo do Falcon 1 em 28 de setembro de 2008.</p>
-      </div>
-      <div class="col-lg-5">
-        <img src="static/img/Merlin1C.png" width="100%">
-      </div>
-      <div class="row info">
-        <div class="col-lg-5">
-          <img src="static/img/Merlin1CVacuum.jpg" width="100%">
-        </div>
-        <div class="col-lg-7">
-          <h1>Merlin Vacuum (1C)</h1><hr>
-          <p>Em 10 de março de 2009, um comunicado à imprensa da SpaceX anunciou o teste bem-sucedido do motor Merlin Vacuum. Uma variante do motor 1C, o Merlin Vacuum apresenta uma seção de escapamento maior e um bocal de expansão significativamente maior para maximizar a eficiência do motor no vácuo do espaço. Sua câmara de combustão é resfriada por regeneração, enquanto o bico de expansão de liga de nióbio de 2,7 metros de comprimento (9 pés) é resfriado por radiação. O motor oferece um impulso de vácuo de 411 kN (92.500 lbf) e um impulso específico de vácuo de 342 s (3,35 km / s). O primeiro motor Merlin Vacuum de produção passou por um disparo de inserção orbital de duração total (329 segundos) do segundo estágio Falcon 9 integrado em 2 de janeiro de 2010. Ele voou no segundo estágio para o vôo inaugural do Falcon 9 em 4 de junho de 2010 Com potência total e em 10 de março de 2009, o motor Merlin Vacuum opera com a maior eficiência de qualquer motor de foguete movido a hidrocarboneto de fabricação americana.</p>
-          <p>Um teste não planejado de um motor Merlin Vacuum modificado foi feito em dezembro de 2010. Pouco antes do segundo vôo programado do Falcon 9, duas rachaduras foram descobertas no bico de folha de liga de nióbio de 2,7 metros de comprimento (9 pés) do Merlin Motor a vácuo. A solução de engenharia foi cortar os 1,2 m (4 pés) inferiores do bocal e lançar dois dias depois, já que o desempenho extra que seria obtido com o bocal mais longo não era necessário para cumprir os objetivos da missão. O motor modificado colocou com sucesso o segundo estágio em uma órbita de 11.000 km (6.800 mi) de altitude.</p>
-      </div>
-
-      <div class="row info">
-        <div class="col-lg-7">
-          <h1>Merlin 1D</h1><hr>
-          <p>O motor Merlin 1D foi desenvolvido pela SpaceX entre 2011 e 2012, com o primeiro voo em 2013. Os objetivos do projeto para o novo motor incluíam maior confiabilidade, melhor desempenho e maior capacidade de fabricação.Em 2011, as metas de desempenho do motor eram um empuxo de vácuo de 690 kN (155.000 lbf), um impulso específico de vácuo (Isp) de 310 s (3,0 km / s), uma taxa de expansão de 16 (em oposição aos 14,5 anteriores de o Merlin 1C) e a pressão da câmara no "ponto ideal" de 9,7 MPa (1.410 psi). O Merlin 1D foi originalmente projetado para acelerar entre 100% e 70% do empuxo máximo; no entanto, novos refinamentos desde 2013 agora permitem que o motor acelere a 40%.</p>
-          <p>Em maio de 2016, a SpaceX anunciou planos para atualizar ainda mais o Merlin 1D aumentando o empuxo a vácuo para 914 kN (205.000 lbf) e o empuxo ao nível do mar para 845 kN (190.000 lbf); de acordo com a SpaceX, o impulso adicional aumentará a capacidade de carga útil do Falcon 9 LEO para cerca de 22 toneladas métricas em uma missão totalmente dispensável. A SpaceX também observou que, ao contrário da iteração Full Thrust anterior do veículo Falcon 9, o aumento no desempenho se deve exclusivamente aos motores atualizados, e nenhuma outra mudança significativa no veículo foi planejada publicamente.</p>
-          <p>Em maio de 2018, antes do primeiro vôo do Falcon 9 Bloco 5, a SpaceX anunciou que a meta de 190.000 lbf (850 kN) havia sido alcançada. O Merlin 1D está agora perto do empuxo ao nível do mar dos motores Rocketdyne H-1 / RS-27 aposentados usados ​​no Saturn I, Saturn IB e Delta II.</p>
-
-      </div>
-      <div class="col-lg-5">
-        <img src="static/img/Merlin1D.png" width="100%">
-      </div>
-
-    </div> <!-- Fecha a classe engine-info -->
-
-</div>
-</main>
-    {% endblock %}
+    
+    <div class="teste"></div>
+{% endblock %}

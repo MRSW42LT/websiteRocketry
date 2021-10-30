@@ -8,39 +8,84 @@
 
         <link rel="icon" type="image/png" href="../static/img/icon.svg"/>
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/d40a8bf739.js" crossorigin="anonymous"></script>
 
         <!-- CSS -->
-        <link rel="stylesheet" href="../static/index.css">
-        <link rel="stylesheet" href="../static/hover.css">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet" href="../static/css/hover.css">
+        
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
     </head>
 
     <body>
-        <header>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-3">
-                    <a href="/" class="logo hvr-grow">ROCKETRY<i class="fas fa-meteor"></i></a>
-                </div>
-                <div class="col-md-auto">
-                    <a href="/" class="shape-0"><i class="fas fa-home"></i> Início</a>
-                    <a href="/escola" class="shape-0"><i class="fas fa-book"></i> Atividades</a>
-                </div>
-                <div class="col col-lg-3">
-                    {% if user.is_authenticated %}
-                    <a href="/logout" class="shape-0">Sair</a>
-                    {% else %}
-                    <a href="/login" class="shape-0">Entrar</a>
-                    <a href="/sign_up" class="shape-0">Registrar-se</a>
-                    {% endif %}
-                </div>
+        <!--
+        {% if user.is_authenticated %}
+          Botão sair /logout 
+        {% else %}
+          Entrar e registrar-se /login e /sign_up 
+        {% endif %}
+        -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">
+                    <img src="/static/img/brand.svg" class="logo-svg" alt="" width="35" height="35">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fx-underline" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fx-underline" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fx-underline" href="/">How it works</a>
+                    </li>
+                    <li class="nav-item dropdown fx-underline">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Propellants</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Potassium Nitrate/Sucrose Propellant (KNSU)</a></li>
+                            <li><a class="dropdown-item" href="#">The Potassium Nitrate/Dextrose Propellant (KNDX)</a></li>
+                            <li><a class="dropdown-item" href="#">The Potassium Nitrate/Sorbitol Propellant (KNSB)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                {% if user.is_authenticated %}
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link fx-underline" href="/logout"><i class="fas fa-sign-out-alt"></i> Sair da minha conta</a>
+                        </li>
+                    </ul>
+                {% else %}
+                    <ul class="navbar-nav d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary" href="/sign_up">Sign up</a></button>
+                        </li>
+                    </ul>
+                    </div>
+                {% endif %}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
             </div>
-        </header>
+        </nav>
 
         {% with messages = get_flashed_messages(with_categories=true)  %}
 
@@ -71,73 +116,42 @@
 
             {% endblock %}
         </main>
-
-
-
-        <footer>
-            <div class="top-footer-wrapper">
-                <div>
-                    <div><h6>Contato</h6></div><hr>
-                    <div>E-mail: contato@denisianhaki.tk</div>
-                    <div>Telefone: +00 00000000</div><br><br>
+        
+        <hr>
+        <footer class="container py-5" id="footer">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <small class="d-block mb-3 text-muted"><img src="/static/img/brand.svg" alt="" width="35" height="35"> Um pequeno website que uso para colocar em prática o que aprendo sobre desenvolvimento na internet e em livros.</small>
+                    <hr><small class="d-block mb-3 text-muted">&copy; Some rights reserved</small>
                 </div>
-                <div>
-                   <div><h6>Saiba mais</h6></div><hr>
-                   <div><a href="">Sala de Imprensa</a></div>
-                   <div><a href="">Diário</a></div><br><br>
+                <div class="col-6 col-md">
+                    <h5>Wallets</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#"><i class="fab fa-bitcoin"></i> Bitcoin</a></li>
+                        <li><a class="text-muted" href="#"><i class="fab fa-bitcoin"></i> Bitcoin Cash</a></li>
+                        <li><a class="text-muted" href="#"><i class="fab fa-ethereum"></i> Ethereum</a></li>
+                        <li><a class="text-muted" href="#"><i class="fab fa-monero"></i> Monero</a></li>
+                    </ul>
                 </div>
-                <div>
-                  <div><h6>Teste</h6></div><hr>
-                  <div><a href="">Teste</a></div><br><br>
-               </div>
-                <div>
-                    <div><h6>Carteiras</h6></div><hr>
-                    <div><a href="">Bitcoin    <i class="fab fa-bitcoin"></i></a></div>
-                    <div><a href="">Ethereum   <i class="fab fa-ethereum"></i></a></div>
+                <div class="col-6 col-md">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled text-small" id="contact">
+                        <li><a class="text-muted"><i class="fas fa-envelope-open-text"></i> contato@denisianhaki.tk</a></li>
+                        <li><a class="text-muted"><i class="fas fa-phone"></i> +55 (42) 99864-3485</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <hr>
-
-            <div>
-                <div class="row justify-content-around">
-                  <div class="col-2">
-                    <i class="fab fa-github"></i>
-                  </div>
-                  <div class="col-2">
-                    <i class="fab fa-twitter"></i>
-                  </div>
-                  <div class="col-2">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                  <div class="col-2">
-                    <i class="fab fa-youtube"></i>
-                  </div>
-                  <div class="col-2">
-                    <i class="fab fa-reddit"></i>
-                  </div>
-                  
+                <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small" id="contact">
+                        <li><a class="text-muted"><i class="fas fa-lock"></i> Privacy policy</a></li>
+                        <li><a class="text-muted"><i class="fas fa-sitemap"></i> Site map</a></li>
+                    </ul>
                 </div>
             </div>
-              <hr>
-
-              <div>
-                <div class="row justify-content-around">
-                  <div class="col-2">
-                    <a href=""><i class="fas fa-lock"></i> Política de privacidade</a>
-                  </div>
-                  <div class="col-2">
-                    <div><a href=""><i class="fas fa-sitemap"></i> Site map</a></div>
-                  </div>
-                  <div class="col-2">
-                    <div><i class="far fa-copyright"></i> Alguns direitos reservados.</div>
-                  </div>
-                </div><br>
-            </div>
-            
         </footer>
 
         <script 
+        
             type="text/javascript"
             src="{{ url_for('static', filename='index.js') }}"
         ></script>

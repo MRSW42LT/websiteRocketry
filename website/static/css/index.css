@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+
+.bg-custom {
+  background-color: #1b4965;
+}
+
+.navbar {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.navbar-brand {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: bold;
+}
+
+.logo-svg {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(240deg) brightness(106%) contrast(101%);
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.fx-underline {
+  position: relative;
+}
+
+.fx-underline::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 2px;
+  right: 0;
+  display: block;
+  width: 95%;
+  height: 1px;
+  background-color: #fff;
+  transform: scaleX(0%);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fx-underline::before {
+  transform-origin: 100% 0;
+}
+
+.fx-underline:hover::before {
+  transform: scaleX(100%);
+  transform-origin: 0 0;
+}
+
+.container {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+#footer {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.auth-container {
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 300px;
+}
+
+.teste {
+  height: 250px;
+}
