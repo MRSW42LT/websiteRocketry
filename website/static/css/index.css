@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  text-indent: 30px;
+}
 
 .bg-custom {
   background-color: #1b4965;
@@ -47,6 +55,13 @@
 .fx-underline:hover::before {
   transform: scaleX(100%);
   transform-origin: 0 0;
+}
+
+.big-icons {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #1b4965;
+  font-size: 50px;
 }
 
 .container {
