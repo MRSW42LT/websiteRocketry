@@ -122,7 +122,7 @@ header .overlay {
 }
 
 #btn-back-to-top {
-  z-index: 99 !important;
+  z-index: 99;
   position: fixed;
   bottom: 20px;
   right: 20px;

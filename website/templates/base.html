@@ -94,14 +94,11 @@
         {% endif %}
         {% endwith %}
 
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
         <main>
-            <button
-                type="button"
-                class="btn btn-danger btn-floating btn-lg"
-                id="btn-back-to-top"
-                >
-                <i class="fas fa-arrow-up"></i>
-            </button>
             {% block main %}
             {% endblock %}
         </main>
@@ -138,16 +135,16 @@
                 </div>
             </div>
         </footer>
-
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script >
-            
-            AOS.init({
-                once: true, // whether animation should happen only once - while scrolling down
-            });
-
+        
+        <script>
             type="text/javascript"
             src="{{ url_for('static', filename='index.js') }}"
+        </script>
+        <script src="../static/index.js"></script>
+        <script>
+            AOS.init({
+                once: true,
+            });
         </script>
     </body>
 </html>
