@@ -31,6 +31,10 @@ def escola():
 
     return  render_template('escola.html', user=current_user)
 
+@views.route('/propellants', methods=['GET', 'POST'])
+def propellants():
+    return render_template('propellants.html', user=current_user)
+
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
