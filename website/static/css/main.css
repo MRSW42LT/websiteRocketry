@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+@import "nav.css";
+@import "header.css";
+@import "jumbotrons.css";
+@import "underline-effects.css";
+@import "hover-effects.css";
+@import "jumbotrons.css";
+@import "custom-bootstrap.css";
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+p {
+  text-indent: 30px;
+}
+
+#btn-back-to-top {
+  z-index: 99;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+#footer {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

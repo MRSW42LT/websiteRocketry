@@ -1,0 +1,24 @@
+.navbar {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+  
+.navbar-brand {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+}
+  
+.logo-svg {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(240deg) brightness(106%) contrast(101%);
+}
+  
+.nav-link {
+    color: white !important;
+}
+  
+.big-icons {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #1b4965;
+    font-size: 50px;
+}

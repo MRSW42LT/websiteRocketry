@@ -3,23 +3,29 @@
 
     {% block main %}
     <main>
-    <div class="container">
-        <!--
-        <a href="static/index.js"><h4>Código fonte JavaScript  <i class="fas fa-external-link-alt"></i></h4></a>
+        <div class="jumbotron jumbotron-fluid jumbo-escola text-white">
+            <div class="container text-center" data-aos="zoom-out">
+                <h1 class="display-4">Atividades</h1>
+                <span class="lead">Espaço destinado a testes e realizações de atividades.</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <a href="escola/pesquisa_bootstrap"><h4>Pesquisa Bootstrap  <i class="fas fa-external-link-alt"></i></h4></a>
+            <a href="escola/formulario"><h4>Formulário  <i class="fas fa-external-link-alt"></i></h4></a>
+            <a href="static/index.js"><h4>Código fonte JavaScript  <i class="fas fa-external-link-alt"></i></h4></a>
+        </div>
+
+    <div class="container border p-3">
 
         <div style="text-align: center;">
             <h2>Ingredientes do bolo </h2>
-
             <input type="text" id="ingredientes" class="form-control"><br>
-
             <button onclick="adicionarIngrediente()" class="btn btn-primary">Adicionar</button><br><br>
-
             <ul class="list-group" id="lista">
-
             </ul>
-
             <br><br><br>
-
+            
             <h2>Soma números</h2>
             <div class="input-group">
             <input type="text" class="form-control" name="campo1" id="campo1"><h2><span style="padding: 0px 10px 0px 10px;">+</span></h2>
@@ -32,9 +38,6 @@
         </div>
 
         <br><br><br>
-        -->
-
-        <li><a href="escola/pesquisa_bootstrap">Pesquisa Bootstrap</a></li>
 
         <h1 align="center">Anotações</h1>
         <ul class="list-group list-group-flush" id="notes">

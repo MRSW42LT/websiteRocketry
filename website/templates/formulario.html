@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+<title>{% block title %}Formulario{% endblock %}</title>
+
+{% block main %}
+    <div class="jumbotron jumbotron-fluid jumbo-formulario text-white">
+        <div class="container text-center" data-aos="zoom-out">
+            <h1 class="display-4">Nos dê a sua opinião</h1>
+            <span class="lead">A sua opinião é importante para podermos melhorar o nosso sistema.</span>
+        </div>
+    </div>
+
+    <div class="container border p-3">
+        <h2 class="text-center">Preencha o formulário abaixo:</h2>
+            <div class="mb-3">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input
+                            type="nome"
+                            class="form-control"
+                            id="nome" name="nome"
+                            placeholder="Digite seu nome"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Endereço de e-mail</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email" name="email"
+                            placeholder="Enter e-mail"
+                        />
+                    </div>
+                    <div class="form-group">  
+                            <label for="exampleFormControlInput1">Descreva a sua opinião:</label>
+                            <textarea name="formOpiniao" id="formOpiniao" class="form-control"></textarea><br>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+{% endblock %}

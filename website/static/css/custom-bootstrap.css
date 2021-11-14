@@ -1,0 +1,15 @@
+.bg-custom {
+    background-color: #1b4965;
+}
+  
+.container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.auth-container {
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 300px;
+}

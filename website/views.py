@@ -1,7 +1,9 @@
 from flask import Blueprint, render_template, request, jsonify
 from flask.helpers import flash
 from flask_login import login_required, current_user
-from .models import Note
+from sqlalchemy.sql.functions import user
+from flask import session    
+from .models import Note, Formulario, User
 from . import db
 import json
 
@@ -51,3 +53,19 @@ def delete_note():
 @views.route('escola/pesquisa_bootstrap')
 def pesquisa_bootstrap():
     return render_template('pesquisa_bootstrap.html', user=current_user)
+
+@views.route('escola/formulario', methods=['GET', 'POST'])
+def formulario():
+         
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        formOpiniao = request.form.get('formOpiniao')
+                
+        new_formOpiniao = Formulario(opiniao_data=formOpiniao, nome=nome, email=email)
+        db.session.add(new_formOpiniao)
+        db.session.commit()
+        flash('Sua opinião foi inviada com sucesso para nosso banco de dados.', category='success')
+    
+
+    return render_template('formulario.html', user=current_user)

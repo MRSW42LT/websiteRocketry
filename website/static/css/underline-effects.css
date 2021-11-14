@@ -1,0 +1,26 @@
+.fx-underline {
+    position: relative;
+  }
+  
+  .fx-underline::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 2px;
+    right: 0;
+    display: block;
+    width: 95%;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0%);
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .fx-underline::before {
+    transform-origin: 100% 0;
+  }
+  
+  .fx-underline:hover::before {
+    transform: scaleX(100%);
+    transform-origin: 0 0;
+  }

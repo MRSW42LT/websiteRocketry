@@ -9,10 +9,15 @@ class Note(db.Model):
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
-
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(50))
     username = db.Column(db.String(50))
     notes = db.relationship('Note')
+
+class Formulario(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(50), unique=False)
+    nome = db.Column(db.String(50))
+    opiniao_data = db.Column(db.String(2000))
