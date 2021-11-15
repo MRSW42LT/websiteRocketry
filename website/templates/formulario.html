@@ -33,10 +33,23 @@
                     </div>
                     <div class="form-group">  
                             <label for="exampleFormControlInput1">Descreva a sua opinião:</label>
-                            <textarea name="formOpiniao" id="formOpiniao" class="form-control"></textarea><br>
+                            <textarea name="opiniao" id="opiniao" class="form-control"></textarea><br>
                             <button type="submit" class="btn btn-primary">Enviar</button>
                     </div>
                 </form>
+
+                <h2>Opiniões anônimas gravadas em nosso banco de dados:</h2>
+
+                {% for row in rows  %}
+                <li class="list-group-item">{{ row[0] }}
+                </li>
+            {% endfor %}
             </div>
     </div>
+
+    <script>
+    if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+    }
+    </script>
 {% endblock %}

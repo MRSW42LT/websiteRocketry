@@ -15,9 +15,10 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(50))
     username = db.Column(db.String(50))
     notes = db.relationship('Note')
+    opinioes = db.relationship('Formulario')
 
-class Formulario(db.Model):
+class Formulario(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
+    opiniao_data = db.Column(db.String(2000),db.ForeignKey('user.id'))
     email = db.Column(db.String(50), unique=False)
     nome = db.Column(db.String(50))
-    opiniao_data = db.Column(db.String(2000))

@@ -6,8 +6,10 @@ from flask import session
 from .models import Note, Formulario, User
 from . import db
 import json
+import sqlite3 as sql
 
 views =  Blueprint('views', __name__)
+
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
@@ -33,6 +35,28 @@ def escola():
 
     return  render_template('escola.html', user=current_user)
 
+@views.route('escola/formulario', methods=['GET', 'POST'])
+def formulario():
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        email = request.form.get('email')
+        opiniao = request.form.get('opiniao')
+                
+        new_opiniao = Formulario(opiniao_data=opiniao, nome=nome, email=email)
+        db.session.add(new_opiniao)
+        db.session.commit()
+        flash('Sua opinião foi inviada com sucesso para nosso banco de dados.', category='success')
+        
+    con = sql.connect('website/database.db')
+    con.row_factory = sql.Row
+        
+    cur = con.cursor()
+    cur.execute('SELECT opiniao_data FROM formulario')
+        
+    rows = cur.fetchall();    
+    
+    return render_template('formulario.html', user=current_user, rows = rows)
+
 @views.route('/propellants', methods=['GET', 'POST'])
 def propellants():
     return render_template('propellants.html', user=current_user)
@@ -53,19 +77,3 @@ def delete_note():
 @views.route('escola/pesquisa_bootstrap')
 def pesquisa_bootstrap():
     return render_template('pesquisa_bootstrap.html', user=current_user)
-
-@views.route('escola/formulario', methods=['GET', 'POST'])
-def formulario():
-         
-    if request.method == 'POST':
-        nome = request.form.get('nome')
-        email = request.form.get('email')
-        formOpiniao = request.form.get('formOpiniao')
-                
-        new_formOpiniao = Formulario(opiniao_data=formOpiniao, nome=nome, email=email)
-        db.session.add(new_formOpiniao)
-        db.session.commit()
-        flash('Sua opinião foi inviada com sucesso para nosso banco de dados.', category='success')
-    
-
-    return render_template('formulario.html', user=current_user)
