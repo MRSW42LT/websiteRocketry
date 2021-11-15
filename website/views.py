@@ -47,7 +47,7 @@ def formulario():
         db.session.commit()
         flash('Sua opinião foi inviada com sucesso para nosso banco de dados.', category='success')
         
-    con = sql.connect('website/database.db')
+    con = sql.connect('database.db')
     con.row_factory = sql.Row
         
     cur = con.cursor()
