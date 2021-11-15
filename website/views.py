@@ -46,8 +46,12 @@ def formulario():
         db.session.add(new_opiniao)
         db.session.commit()
         flash('Sua opinião foi inviada com sucesso para nosso banco de dados.', category='success')
+    
+    try:
+        con = sql.connect('websiteRocketry/website/database.db')
+    except:
+        con = sql.connect('website/database.db')
         
-    con = sql.connect('websiteRocketry/website/database.db')
     con.row_factory = sql.Row
         
     cur = con.cursor()
