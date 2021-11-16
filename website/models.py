@@ -22,3 +22,7 @@ class Formulario(db.Model, UserMixin):
     opiniao_data = db.Column(db.String(2000),db.ForeignKey('user.id'))
     email = db.Column(db.String(50), unique=False)
     nome = db.Column(db.String(50))
+    
+class Comentario(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    data = db.Column(db.String(500))

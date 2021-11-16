@@ -3,7 +3,7 @@ from flask.helpers import flash
 from flask_login import login_required, current_user
 from sqlalchemy.sql.functions import user
 from flask import session    
-from .models import Note, Formulario, User
+from .models import Comentario, Note, Formulario, User
 from . import db
 import json
 import sqlite3 as sql
@@ -45,7 +45,7 @@ def formulario():
         new_opiniao = Formulario(opiniao_data=opiniao, nome=nome, email=email)
         db.session.add(new_opiniao)
         db.session.commit()
-        flash('Sua opinião foi inviada com sucesso para nosso banco de dados.', category='success')
+        flash('Sua opinião foi enviada com sucesso para nosso banco de dados.', category='success')
     
     try:
         con = sql.connect('websiteRocketry/website/database.db')
@@ -63,7 +63,26 @@ def formulario():
 
 @views.route('/propellants', methods=['GET', 'POST'])
 def propellants():
-    return render_template('propellants.html', user=current_user)
+    if request.method == 'POST':
+        comment = request.form.get('comment')
+        
+        new_comment = Comentario(data=comment)
+        db.session.add(new_comment)
+        db.session.commit()
+        
+    try:
+        con = sql.connect('websiteRocketry/website/database.db')
+    except:
+        con = sql.connect('website/database.db')
+            
+    con.row_factory = sql.Row
+            
+    cur = con.cursor()
+    cur.execute('SELECT data FROM comentario')
+            
+    rows = cur.fetchall();    
+        
+    return render_template('propellants.html', user=current_user, rows=rows)
 
 
 @views.route('/delete-note', methods=['POST'])
