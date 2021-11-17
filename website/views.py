@@ -13,7 +13,26 @@ views =  Blueprint('views', __name__)
 
 @views.route('/', methods=['GET', 'POST'])
 def home():
-    return  render_template('home.html', user=current_user)
+    if request.method == 'POST':
+        comment = request.form.get('comment')
+        
+        new_comment = Comentario(data_home=comment)
+        db.session.add(new_comment)
+        db.session.commit()
+        
+    try:
+        con = sql.connect('websiteRocketry/website/database.db')
+    except:
+        con = sql.connect('website/database.db')
+            
+    con.row_factory = sql.Row
+            
+    cur = con.cursor()
+    cur.execute('SELECT data_home FROM comentario')
+            
+    rows = cur.fetchall();    
+    
+    return  render_template('home.html', user=current_user, rows = rows)
 
 @views.route('/about')
 def about():
@@ -66,7 +85,7 @@ def propellants():
     if request.method == 'POST':
         comment = request.form.get('comment')
         
-        new_comment = Comentario(data=comment)
+        new_comment = Comentario(data_propellants=comment)
         db.session.add(new_comment)
         db.session.commit()
         
@@ -78,7 +97,7 @@ def propellants():
     con.row_factory = sql.Row
             
     cur = con.cursor()
-    cur.execute('SELECT data FROM comentario')
+    cur.execute('SELECT data_propellants FROM comentario')
             
     rows = cur.fetchall();    
         

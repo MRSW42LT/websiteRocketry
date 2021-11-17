@@ -25,4 +25,6 @@ class Formulario(db.Model, UserMixin):
     
 class Comentario(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    data = db.Column(db.String(500))
+    data_propellants = db.Column(db.String(500))  #FAVOR TROCAR O DATA PARA DATA_PROPELLANTS NA DATABASE
+    data_home = db.Column(db.String(500))
+    

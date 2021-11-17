@@ -49,4 +49,29 @@
         </div>
     </div>
 
+    <div class="container comment-section">
+      <div class="add-comment">
+          <form method="POST">
+              <div class="row">
+                  <div class="col-2" style="text-align: center; font-size:60px;">
+                      <i class="far fa-user"></i>
+                  </div>
+                  <div class="col-10">
+                      <div class="form-group"> 
+                          <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Add a comment..."></textarea>   
+                          <button type="submit" class="btn btn-outline-secondary mt-1">Post</button>
+                      </div>
+                      </div>
+                  </div>
+            </form>
+      </div>
+          
+      <!-- COMENTARIOS -->
+      {% for row in rows  %}
+      <li class="list-group-item"><i class="fas fa-user"> anonymous</i><br>{{row[0]}}</li>
+      {% endfor %}
+      <!-- ----------- -->
+
+    </div>
+
 {% endblock %}

@@ -55,15 +55,14 @@
                       </div>
                   </div>
             </form>
-          </div>
-          
-          {% for row in rows  %}
-          <li class="list-group-item">
-            <i class="fas fa-user"> anonymous</i><br>
-            {{ row[0] }}
-          </li>
-          {% endfor %}
       </div>
-  </div>
+          
+      <!-- COMENTARIOS -->
+      {% for row in rows  %}
+      <li class="list-group-item"><i class="fas fa-user"> anonymous</i><br>{{row[0]}}</li>
+      {% endfor %}
+      <!-- ----------- -->
+
+    </div>
 
 {% endblock %}
