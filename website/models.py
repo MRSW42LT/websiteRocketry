@@ -23,8 +23,11 @@ class Formulario(db.Model, UserMixin):
     email = db.Column(db.String(50), unique=False)
     nome = db.Column(db.String(50))
     
-class Comentario(db.Model, UserMixin):
+class ComentarioHome(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    data_propellants = db.Column(db.String(500))  #FAVOR TROCAR O DATA PARA DATA_PROPELLANTS NA DATABASE
     data_home = db.Column(db.String(500))
+    
+class ComentarioPropellants(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    data_propellants = db.Column(db.String(500))
     

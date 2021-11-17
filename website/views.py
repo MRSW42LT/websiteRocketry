@@ -3,7 +3,7 @@ from flask.helpers import flash
 from flask_login import login_required, current_user
 from sqlalchemy.sql.functions import user
 from flask import session    
-from .models import Comentario, Note, Formulario, User
+from .models import ComentarioHome, ComentarioPropellants, Note, Formulario, User
 from . import db
 import json
 import sqlite3 as sql
@@ -16,7 +16,7 @@ def home():
     if request.method == 'POST':
         comment = request.form.get('comment')
         
-        new_comment = Comentario(data_home=comment)
+        new_comment = ComentarioHome(data_home=comment)
         db.session.add(new_comment)
         db.session.commit()
         
@@ -28,11 +28,11 @@ def home():
     con.row_factory = sql.Row
             
     cur = con.cursor()
-    cur.execute('SELECT data_home FROM comentario')
+    cur.execute('SELECT data_home FROM comentario_home')
             
-    rows = cur.fetchall();    
+    rowsHome = cur.fetchall();    
     
-    return  render_template('home.html', user=current_user, rows = rows)
+    return  render_template('home.html', user=current_user, rowsHome = rowsHome)
 
 @views.route('/about')
 def about():
@@ -85,7 +85,7 @@ def propellants():
     if request.method == 'POST':
         comment = request.form.get('comment')
         
-        new_comment = Comentario(data_propellants=comment)
+        new_comment = ComentarioPropellants(data_propellants=comment)
         db.session.add(new_comment)
         db.session.commit()
         
@@ -97,11 +97,11 @@ def propellants():
     con.row_factory = sql.Row
             
     cur = con.cursor()
-    cur.execute('SELECT data_propellants FROM comentario')
+    cur.execute('SELECT data_propellants FROM comentario_propellants')
             
-    rows = cur.fetchall();    
+    rowsPropellants = cur.fetchall();    
         
-    return render_template('propellants.html', user=current_user, rows=rows)
+    return render_template('propellants.html', user=current_user, rowsPropellants=rowsPropellants)
 
 
 @views.route('/delete-note', methods=['POST'])
