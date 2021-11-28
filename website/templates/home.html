@@ -2,6 +2,7 @@
 <title>{% block title %}Home{% endblock %}</title>
 
 {% block main %}
+
     <header>
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -16,19 +17,19 @@
             </div>
         </div>
     </header>
-    
-    <div class="container">
+   
+    <div class="container steps"> 
         <div class="row">
-            <div class="col-md-3 text-center" data-aos="zoom-in">
+            <div class="col-md-3 text-center" data-aos="fade-up">
                 <i class="fas fa-flask big-icons"></i><br><h4>Prepare</h4>Carefully mix the danger chemicals.
             </div>
-            <div class="col-md-3 text-center" data-aos="zoom-in">
+            <div class="col-md-3 text-center" data-aos="fade-up">
                <i class="fas fa-tools big-icons"></i><br><h4>Assemble</h4>Just read the instructions and follow them carefully.
             </div>
-            <div class="col-md-3 text-center" data-aos="zoom-in">
+            <div class="col-md-3 text-center" data-aos="fade-up">
                 <i class="fas fa-rocket big-icons"></i><br><h4>Launch</h4>If you've done everything correctly, it probably won't explode.
             </div>
-            <div class="col-md-3 text-center" data-aos="zoom-in">
+            <div class="col-md-3 text-center" data-aos="fade-up">
                 <i class="fas fa-parachute-box big-icons"></i><br><h4>Recover</h4>Open the parachute and land the vessel smoothly.
             </div>
         </div>
@@ -66,12 +67,9 @@
             </form>
       </div>
           
-      <!-- COMENTARIOS -->
         {% for row in rowsHome  %}
         <li class="list-group-item"><i class="fas fa-user"> anonymous</i><br>{{row[0]}}<br></li>
         {% endfor %}
-      <!-- ----------- -->
-
     </div>
-
+    
 {% endblock %}

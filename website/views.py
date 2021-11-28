@@ -10,7 +10,6 @@ import sqlite3 as sql
 
 views =  Blueprint('views', __name__)
 
-
 @views.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -102,7 +101,6 @@ def propellants():
     rowsPropellants = cur.fetchall();    
         
     return render_template('propellants.html', user=current_user, rowsPropellants=rowsPropellants)
-
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
